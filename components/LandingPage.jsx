@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import Navbar from '../parts/Navbar'; // Import the Navbar component
 import { UploadCloud, ArrowRight } from 'lucide-react';
 import axios from 'axios'; // Import axios for making HTTP requests
-import '../style/landingPage.css'; // Import the CSS file
+import '../style/landingpage.css'; // Import the CSS file
 
 const LandingPage = () => {
     const [query, setQuery] = useState('');
