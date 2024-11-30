@@ -1,13 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
+// vite.config.js
+export default {
   server: {
-    port: process.env.PORT || 4173,  // Use Heroku's dynamic PORT or default to 4173
-    host: '0.0.0.0', // Allow access from external network (necessary for Heroku)
+    port: process.env.PORT || 5173, // Use Heroku's $PORT or fallback to 4173
+    host: '0.0.0.0', // This makes it listen on all network interfaces
   },
-})
+};
 
 
