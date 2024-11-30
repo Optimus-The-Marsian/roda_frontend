@@ -1,0 +1,77 @@
+:root {
+    --bg-color-light: #fff;
+    --bg-color-dark: #121212;
+    --text-color-light: #121212; /* Dark text color for light mode */
+    --text-color-dark: #fff; /* White text for dark mode */
+    --border-color-light: #ccc;
+    --border-color-dark: #333;
+    --primary-color-light: #007bff;
+    --primary-color-dark: #1a73e8;
+    --secondary-text-color-light: #333; /* Darker secondary text for light mode */
+    --secondary-text-color-dark: #bbb;  /* Lighter secondary text for dark mode */
+    --feature-header-light: #000; /* Very dark color for light mode feature header */
+    --feature-text-light: #111; /* Slightly lighter than header for light mode feature text */
+    --feature-header-dark: #fff; /* Light color for dark mode feature header */
+    --feature-text-dark: #999999; /* Slightly darker than header for dark mode feature text */
+}
+
+body.light-mode {
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+    --secondary-text-color: var(--secondary-text-color-light);
+    --border-color: var(--border-color-light);
+    --primary-color: var(--primary-color-light);
+    --feature-header: var(--feature-header-light);
+    --feature-text: var(--feature-text-light);
+}
+
+body.dark-mode {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --secondary-text-color: var(--secondary-text-color-dark);
+    --border-color: var(--border-color-dark);
+    --primary-color: var(--primary-color-dark);
+    --feature-header: var(--feature-header-dark);
+    --feature-text: var(--feature-text-dark);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;  /* Adding a font for clarity */
+}
+
+.navbar, .footer {
+    border-color: var(--border-color);
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.button-primary:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.hero-text {
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text-light-mode {
+    color: var(--text-color-light); /* Ensuring text color matches dark mode background */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-text {
+    color: var(--secondary-text-color);
+}
+
+.feature-header {
+    color: var(--feature-header);
+}
+
+.feature-text {
+    color: var(--feature-text);
+}
