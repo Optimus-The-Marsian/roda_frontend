@@ -25,7 +25,8 @@ const Signup = () => {
     const formData = { username, email, password, confirmpassword };
 
     try {
-        const response = await fetch('https://roda-ai-server-c353a210639c.herokuapp.com/create-user', {
+        // const response = await fetch('http://localhost:5000/create-user', {
+            const response = await fetch('https://roda-ai-server-c353a210639c.herokuapp.com/create-user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

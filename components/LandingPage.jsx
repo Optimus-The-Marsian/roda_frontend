@@ -31,48 +31,6 @@ const LandingPage = () => {
         }
     };
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     const file = fileInputRef.current?.files[0];
-    //     if (!file && !query.trim()) {
-    //         setMessage('Please upload a file or enter a URL.');
-    //         return;
-    //     }
-
-    //     setLoading(true);
-    //     setMessage('');
-
-    //     try {
-    //         if (file) {
-    //             // Handle file upload
-    //             const formData = new FormData();
-    //             formData.append('audio', file);
-
-    //             // const response = await axios.post('http://localhost:5000/process-audio', formData, {
-    //             //     headers: { 'Content-Type': 'multipart/form-data' },
-    //             // });
-
-    //             const response = await axios.post('http://localhost:5000/process-audio', formData, {
-    //                 headers: { 'Content-Type': 'multipart/form-data' },
-    //                 withCredentials: true,  // Ensure cookies are sent with the request
-    //             });
-                
-
-    //             // Assuming the response contains a URL to the processed audio
-    //             setAudioUrl(response.data.audio_url); // Store the audio URL from the response
-    //         } else {
-    //             // Handle URL submission if no file
-    //             console.log('URL submitted:', query);
-    //         }
-    //     } catch (error) {
-    //         setMessage('Error uploading file. Please try again.');
-    //         console.error(error);
-    //     } finally {
-    //         setLoading(false);
-    //         fileInputRef.current.value = ''; // Clear file input
-    //     }
-    // };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const file = fileInputRef.current?.files[0];
@@ -114,7 +72,8 @@ const LandingPage = () => {
             }
     
             // Send the request to the backend
-            const response = await axios.post('http://localhost:5000/process-audio', formData, {
+            const response = await axios.post('https://roda-ai-server-c353a210639c.herokuapp.com/process-audio', formData, {
+                // const response = await axios.post('http://localhost:5000/process-audio', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
                 withCredentials: true, // Ensure cookies are sent with the request
             });

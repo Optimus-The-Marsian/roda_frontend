@@ -22,7 +22,8 @@ const Signup = () => {
         const formData = { email, password };
 
         try {
-            const response = await fetch('https://roda-ai-server-c353a210639c.herokuapp.com/sign-in', {
+            // const response = await fetch('http://localhost:5000/sign-in', {
+                const response = await fetch('https://roda-ai-server-c353a210639c.herokuapp.com/sign-in', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
